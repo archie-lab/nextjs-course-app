@@ -3,9 +3,10 @@ import {useRouter} from "next/router";
 
 const Page = () => {
     const router = useRouter();
-    const {id} = router.query;
+    const {params} = router.query;
+    console.log("== params", params);
     return (
-        <div>Note {id}</div>
+        <div>Note: params length = {params.length}</div>
     );
 };
 
